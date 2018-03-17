@@ -7,7 +7,7 @@ operacao op x y | (op == '+') = x + y
 main = do
   putStrLn "Operador:"
   operador <- getChar
-  getLine
+  _ <- getLine
   putStrLn "Primeiro numero:"
   b <- getLine
   putStrLn "Segundo Numero:"
