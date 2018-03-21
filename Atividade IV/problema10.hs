@@ -1,16 +1,13 @@
-maior :: Int -> Int -> Int -> Int
-maior x y z = if (x < y)
-  then
-    if (x < z)
-      then x
-    else
-      z
-  else
-    if (y < z)
-      then
-        y
-      else
-        z
+maior x y z = maiorX + maiorY + maiorZ + iguais
+  where
+    maiorX  | (x > y) && (x > z) = x
+            | otherwise = 0
+    maiorY  | (y > x) && (y > z) = y
+            | otherwise = 0
+    maiorZ  | (z > x) && (z > y) = z
+            | otherwise = 0
+    iguais  | (x == y) && (x == z) = x
+            | otherwise = 0
 
 main = do
   putStrLn "Informe o numero: "
