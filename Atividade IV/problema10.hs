@@ -1,8 +1,8 @@
 maior :: Int -> Int -> Int -> Int
-maior a b c | (a > m b c) = a
-            | otherwise = m b c
+maior a b c | (a > big b c) = a
+            | otherwise = big b c
 
-m b c | (b > c) = b
+big b c | (b > c) = b
       | otherwise = c
 
 main = do
