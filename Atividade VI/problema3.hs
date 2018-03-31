@@ -1,11 +1,8 @@
 data Ponto = XY Float Float | XYZ Float Float Float
 
 distancia :: Ponto -> Ponto -> Float
--- 2D
-distancia (XY x1 y1)(XY x2 y2) = sqrt((x2-x1)^2 + (y2-y1)^2)
-
--- 3D
-distancia (XYZ x1 y1 z1)(XYZ x2 y2 z2) = sqrt((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
+distancia (XY x1 y1)(XY x2 y2) = sqrt((x2 - x1)^2 + (y2 - y1)^2)
+distancia (XYZ x1 y1 z1)(XYZ x2 y2 z2) = sqrt((x2-x1)^2 + (y2-y1)^2 + (z2-z2)^2)
 
 -- 2 pontos 2D
 p1 :: Ponto
@@ -22,5 +19,5 @@ p4 :: Ponto
 p4 = (XYZ 2 2 2)
 
 main = do
-  putStrLn (show (distancia p1 p2))
+  putStrLn (show (distancia p1 p2))  
   putStrLn (show (distancia p3 p4))
