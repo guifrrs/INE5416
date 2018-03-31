@@ -1,9 +1,9 @@
 fib :: Int -> Int
-fib n   | (n < 2) = n
-        | otherwise = fib(n - 1) + fib(n - 2)
+fib x | (x < 2) = x
+      | otherwise = fib(x-1) + fib(x-2)
 
-main = do 
-  putStrLn "Digite o numero: "
+main = do
+  putStrLn "Numero:"
   a <- getLine
   let x = (read a :: Int)
-  print(fib x)
+  print (fib x)

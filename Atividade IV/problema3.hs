@@ -1,11 +1,11 @@
 areaTriangulo :: Float -> Float -> Float
-areaTriangulo x y = (x * y) / 2
+areaTriangulo base altura = (base * altura) / 2
 
 main = do
-  putStrLn "Informe a base: "
+  putStrLn "Base:"
   a <- getLine
-  putStrLn "Informe a altura: "
+  putStrLn "Altura:"
   b <- getLine
-  let x = (read a :: Float)
-  let y = (read b :: Float)
-  print (areaTriangulo x y)
+  let base = (read a :: Float)
+  let altura = (read b :: Float)
+  print (areaTriangulo base altura)

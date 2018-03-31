@@ -1,8 +1,8 @@
 potencia :: Int -> Int -> Int
-potencia x y  | (y == 1) =  x
-              |  otherwise = x * (potencia x (y - 1))
+potencia x y  | (y == 1) = x
+              | otherwise = x * (potencia x (y-1))
 
-main = do 
+main = do
   putStrLn "Primeiro numero:"
   a <- getLine
   putStrLn "Segundo numero:"

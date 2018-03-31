@@ -1,20 +1,16 @@
-maior x y z = maiorX + maiorY + maiorZ + iguais
-  where
-    maiorX  | (x > y) && (x > z) = x
-            | otherwise = 0
-    maiorY  | (y > x) && (y > z) = y
-            | otherwise = 0
-    maiorZ  | (z > x) && (z > y) = z
-            | otherwise = 0
-    iguais  | (x == y) && (x == z) = x
-            | otherwise = 0
+maior :: Int -> Int -> Int -> Int
+maior a b c | (a > m b c) = a
+            | otherwise = m b c
+
+m b c | (b > c) = b
+      | otherwise = c
 
 main = do
-  putStrLn "Informe o numero: "
+  putStrLn "Primeiro numero:"
   a <- getLine
-  putStrLn "Informe o numero: "
+  putStrLn "Segundo numero:"
   b <- getLine
-  putStrLn "Informe o numero: "
+  putStrLn "Terceiro numero:"
   c <- getLine
   let x = (read a :: Int)
   let y = (read b :: Int)
