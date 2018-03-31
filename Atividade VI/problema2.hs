@@ -9,6 +9,6 @@ minhaForma = (Triangulo 4 6)
 
 main = do
   putStrLn (show (area (Circulo 6.42)))
-  putStrLn (show (area (Retangulo 4 5)))
-  putStrLn (show (area (Triangulo 4 5)))
-  putStrLn (show (area minhaForma))
+  putStrLn (show (area (Retangulo 4 6)))
+  putStrLn (show (area (minhaForma)))
+  
