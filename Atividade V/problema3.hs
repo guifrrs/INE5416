@@ -1,7 +1,10 @@
 menor :: [Int] -> Int
 menor [] = 0
-menor (a:b) | (a < b) = a
-            | otherwise = b
+menor [x] = x
+menor (x:xs)
+  | x < less = x
+  | otherwise = less
+  where less = menor xs
 
 main = do
   putStrLn "Lista de numeros:"

@@ -1,14 +1,14 @@
 soma :: [Int] -> Int
 soma [] = 0
-soma (a:b) = a + soma b
+soma (x:xs) = x + soma xs
 
 comprimento :: [Int] -> Int
 comprimento [] = 0
-comprimento (_:b) = 1 + comprimento b
+comprimento (_:xs) = 1 + comprimento xs
 
 media :: [Int] -> Float
 media [] = 0
-media (a:b) = (fromIntegral (soma b)) / (fromIntegral (comprimento b))
+media x = fromIntegral (soma x) / fromIntegral (comprimento x)
 
 main = do
   putStrLn "Lista de numeros:"

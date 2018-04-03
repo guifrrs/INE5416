@@ -1,6 +1,6 @@
 soma :: [Int] -> Int
 soma [] = 0
-soma (a:b) = a + soma b
+soma (x:xs) = x + soma xs
 
 main = do 
   putStrLn "Lista de numeros:"
