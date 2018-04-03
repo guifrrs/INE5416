@@ -1,9 +1,11 @@
 maior :: Int -> Int -> Int -> Int
-maior a b c | (a > big b c) = a
-            | otherwise = big b c
+maior a b c 
+  | (a > big b c) = a
+  | otherwise = big b c
 
-big b c | (b > c) = b
-      | otherwise = c
+big b c 
+  | (b > c) = b
+  | otherwise = c
 
 main = do
   putStrLn "Primeiro numero:"

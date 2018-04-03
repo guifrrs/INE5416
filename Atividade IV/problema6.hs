@@ -1,6 +1,7 @@
 triangulo :: Int -> Int -> Int -> [Char]
-triangulo x y z | (x < y+z) && (y < x+z) && (z < y + x) = "Possivel"
-                | otherwise = "Impossivel"
+triangulo x y z 
+  | (x < y + z) && (y < x + z) && (z < y + x) = "Possivel"
+  | otherwise = "Impossivel"
 
 main = do
   putStrLn "Primeiro lado:"

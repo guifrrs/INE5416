@@ -1,6 +1,7 @@
 absoluto :: Int -> Int
-absoluto x  | (x < 0) = -x
-            | otherwise = x
+absoluto x  
+  | (x < 0) = -x
+  | otherwise = x
 
 main = do
   putStrLn "Numero:"

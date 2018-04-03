@@ -1,6 +1,7 @@
 fib :: Int -> Int
-fib x | (x < 2) = x
-      | otherwise = fib(x-1) + fib(x-2)
+fib x 
+  | (x < 2) = x
+  | otherwise = fib(x-1) + fib(x-2)
 
 main = do
   putStrLn "Numero:"
