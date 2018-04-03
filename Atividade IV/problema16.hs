@@ -1,7 +1,5 @@
-euclides :: Int -> Int -> Int
-euclides x y 
-  | (x == 0) = y
-  | otherwise = (euclides (y `mod` x) x)
+divisivel :: Int -> Int -> Bool
+divisivel a b = (a `mod` b) == 0
 
 main = do
   putStrLn "Primeiro numero:"
@@ -10,5 +8,4 @@ main = do
   b <- getLine
   let x = (read a :: Int)
   let y = (read b :: Int)
-  print (euclides x y)
-  
+  print (divisivel x y)
