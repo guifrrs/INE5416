@@ -3,6 +3,4 @@ inverte [x] = [x]
 inverte (x:xs) = inverte xs ++ [x]
 
 main = do
-  putStrLn "Lista de numeros: (Formato Num Num Num)"
-  a <- getLine
-  print (inverte a)
+  putStrLn (show (inverte [1, 2, 3, 4, 5]))

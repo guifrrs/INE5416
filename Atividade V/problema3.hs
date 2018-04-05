@@ -7,7 +7,4 @@ menor (x:xs)
   where less = menor xs
 
 main = do
-  putStrLn "Lista de numeros:"
-  a <- getLine
-  let x = (read a :: [Int])
-  print (menor x)
+  putStrLn (show (menor [3, 4, 5, 9, 100, 22, 1]))

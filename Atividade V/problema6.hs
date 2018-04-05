@@ -5,10 +5,4 @@ ocorrencias (x:xs) i
   | otherwise = ocorrencias xs i
 
 main = do
-  putStrLn "Lista de Numeros:"
-  a <- getLine
-  putStrLn "Numero a ser buscado:"
-  b <- getLine
-  let x = (read a :: [Int])
-  let y = (read b :: Int)
-  print (ocorrencias x y)
+  putStrLn (show (ocorrencias [1, 2, 2, 3, 4, 5, 6, 2, 7] 2))

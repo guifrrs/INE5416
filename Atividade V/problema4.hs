@@ -18,7 +18,4 @@ diferencaMaiorMenor :: [Int] -> Int
 diferencaMaiorMenor x = maior x - menor x
 
 main = do
-  putStrLn "Lista de numeros:"
-  a <- getLine
-  let x = (read a :: [Int])
-  print (diferencaMaiorMenor x)
+  putStrLn (show (diferencaMaiorMenor [20, 15, 17, 18, 19, 25, 10]))

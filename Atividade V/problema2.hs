@@ -11,7 +11,4 @@ media [] = 0
 media x = fromIntegral (soma x) / fromIntegral (comprimento x)
 
 main = do
-  putStrLn "Lista de numeros:"
-  a <- getLine
-  let x = (read a :: [Int])
-  print (media x)
+  putStrLn (show (media [10, 10, 8, 4]))
