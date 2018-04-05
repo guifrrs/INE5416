@@ -7,8 +7,12 @@ getNome (a,b,c) = b
 getPrimeiroAluno :: [(Int, String, Float)] -> (Int, String, Float)
 getPrimeiroAluno (a:_) = a
 
-gerarPares :: [t] -> [u] -> [(t,u)] 
-gerarPares l1 l2 = [(a,b) | a <- l1, b <- l2]
+gerarPares l1 l2 = [(a, b) | (id1, a, _) <- l1, (id2, b, _) <- l2, id1 /= id2]
+
+aprovados :: [(Int, String, Float)] -> [String]
+aprovados x = map (getNome) (filter (apv) x)
+
+apv (_, _, n) = n >= 6
 
 main = do
     print (getPrimeiroAluno alunos)
