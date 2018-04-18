@@ -7,7 +7,7 @@ data Fila t = Queue [t]
 enqueue :: Fila t -> t -> Fila t  
 enqueue (Queue x) s =  Queue (x ++ [s])
 
--- Para realizar o dequeue, retiramos um elemento do final da fila.
+-- Para realizar o dequeue, retiramos um elemento do inicio da fila.
 dequeue :: Fila t -> Fila t
 dequeue (Queue []) = error "Empty"
 dequeue (Queue (x:xs)) = Queue xs
