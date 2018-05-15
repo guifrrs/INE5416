@@ -5,3 +5,5 @@
 *.o
 *.zip
 *.pdf
+*.fas
+*.lib
