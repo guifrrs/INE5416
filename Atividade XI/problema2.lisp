@@ -1,6 +1,6 @@
 (defun absoluto(x)
   (if (< x 0)
-    (* x  -1)
+    (* -1 x)
     x
   )
 )

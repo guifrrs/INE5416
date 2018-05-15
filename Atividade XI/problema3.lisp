@@ -3,9 +3,9 @@
 )
 
 (defun main()
-  (setq x (read))
-  (setq y (read))
-  (write-line (write-to-string (areaTriangulo x y)))
+  (setq base (read))
+  (setq altura (read))
+  (write-line (write-to-string (areaTriangulo base altura)))
 )
 
 (main)

@@ -1,5 +1,5 @@
 (defun potencia(x y)
-  (if (= y 1)
+  (if (= 1 y)
     x
     (* x (potencia x (- y 1)))
   )
