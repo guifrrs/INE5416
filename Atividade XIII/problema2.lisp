@@ -12,7 +12,7 @@
                       :dir (make-no :n 35 :esq NIL :dir NIL)
              )
         :dir (make-no :n 56 
-                      :esq (make-no :n 56 :esq NIL :dir NIL) 
+                      :esq (make-no :n 51 :esq NIL :dir NIL) 
                       :dir (make-no :n 64 :esq NIL :dir NIL)
              ) 
     )
@@ -72,7 +72,19 @@
     )
 )
 
+(defun ocorrenciasElemento(arv x)
+    (if (null arv)
+        0
+        (if (= (no-n arv) x)
+            (+ 1 (+ (ocorrenciasElemento (no-esq arv) x) (ocorrenciasElemento (no-dir arv) x)))
+            (+ (ocorrenciasElemento (no-esq arv) x) (ocorrenciasElemento (no-dir arv) x))
+        )
+    )
+)
 
+(defun media(arv)
+    (/ (soma arv) (quantidade arv))
+)
 
 (defun maioresQueElemento(arv x)
   (if (null arv)
@@ -92,6 +104,13 @@
   )
 )
 
+(defun elementos(arv)
+    (if (null arv)
+        ()
+        (cons (no-n arv) (nconc (elementos (no-esq arv)) (elementos (no-dir arv))))
+    )
+)
+
 (defun main()
     (write-line (write-to-string (soma minhaArvore)))
     (write-line (write-to-string (buscaElemento minhaArvore 35)))
@@ -101,7 +120,9 @@
     (write-line (write-to-string minhaArvore))
     (write-line (write-to-string (ocorrenciasElemento minhaArvore 56)))
     (write-line (write-to-string (quantidade minhaArvore)))
+    (write-line (write-to-string (media minhaArvore)))
     (write-line (write-to-string (maioresQueElemento minhaArvore 55)))
+    (write-line (write-to-string (elementos minhaArvore)))
 )
 
 (main)

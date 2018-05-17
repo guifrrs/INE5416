@@ -1,0 +1,15 @@
+(defun fatia(lista n m)
+  (if (AND (OR (null lista) (= m 0) (<= n 0)))
+    '()
+    (if (AND (> m 0) (= n 0))
+      (cons (car lista) (fatia (cdr lista) n (- m 1)))
+      (fatia (cdr lista) (- n 1) (- m 1))
+    )
+  )
+)
+
+(defun main()
+  (write-line (write-to-string (fatia '(1 2 3 4 5 6) 2 4)))
+)
+
+(main)

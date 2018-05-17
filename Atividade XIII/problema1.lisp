@@ -41,11 +41,24 @@
   (- (+ (* (ponto-x a) (ponto-y b)) (* (ponto-x a) (ponto-x c)) (* (ponto-x b) (ponto-y c))) (+ (* (ponto-y b) (ponto-x c)) (* (ponto-x a) (ponto-y c)) (* (ponto-x b) (ponto-y a))))
 )
 
+(defun formaTriangulo (p1 p2 p3)
+  (setq A (distancia p1 p2))
+  (setq B (distancia p2 p3))
+  (setq C (distancia p3 p1))
+  (AND 
+    (< (abs (- A B)) C)
+    (AND (< (abs (- A C)) B)
+    (AND (> (+ A B) C)
+    (AND (< (abs (- B C)) A)
+    (AND (> (+ B C) A)
+    (> (+ C A) B))))))
+)
 
 
 (defun main()
   (write-line (write-to-string (distancia p1 p2)))
   (write-line (write-to-string (colinares p1 p2 p3)))
+  (write-line (write-to-string (formaTriangulo p1 p2 p3)))
 )
 
 (main)
